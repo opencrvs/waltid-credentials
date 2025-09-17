@@ -3,16 +3,14 @@
 ```json
 {
   "@context": [
-    "https://www.w3.org/2018/credentials/v1",
-    "https://w3id.org/security/suites/jws-2020/v1",
-    "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/gaia-x/development#"
   ],
-  "type": ["VerifiableCredential" ,"GaiaXTermsAndConditions"],
+  "type": ["VerifiableCredential" ,"gx:Issuer"],
   "issuanceDate": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
   "credentialSubject": {
-    "gx:termsAndConditions": "The PARTICIPANT signing the Self-Description agrees as follows:\n- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.\n\nThe keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD).",
-    "type": "gx:GaiaXTermsAndConditions",
-    "id": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION"
+    "id": "https://delta-dao.com/.well-known/2503_gx_TandC_deltaDAO.json",
+    "gaiaxTermsAndConditions": "4bd7554097444c960292b4726c2efa1373485e8a5565d94d41195214c5e0ceb3"
   },
   "issuer": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
   "id": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION"
@@ -24,7 +22,7 @@
 ```json
 {
     "claims": {
-        "Gaia-X Terms and Conditions": "$.credentialSubject['gx:termsAndConditions']"
+        "Gaia-X Terms and Conditions": "$.credentialSubject['gaiaxTermsAndConditions']"
     }
 }
 ```
@@ -35,9 +33,6 @@
 {
   "id": "<uuid>",
   "issuer": "<issuerDid>",
-  "credentialSubject": {
-    "id": "<subjectDid>"
-  },
   "issuanceDate": "<timestamp>",
   "expirationDate": "<timestamp-in:365d>"
 }

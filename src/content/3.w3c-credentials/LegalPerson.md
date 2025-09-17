@@ -6,7 +6,7 @@
     "https://www.w3.org/2018/credentials/v1",
     "https://w3id.org/gaia-x/development#"
   ],
-  "type": ["VerifiableCredential", "LegalPerson"],
+  "type": ["VerifiableCredential", "gx:LegalPerson"],
   "id": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
   "name": "Legal Person",
   "issuer": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",

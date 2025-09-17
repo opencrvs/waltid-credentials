@@ -1,4 +1,4 @@
-# LegalRegistrationNumber
+# LegalRegistrationNumberLeiCode
 
 ```json
 {
@@ -8,7 +8,7 @@
   ],
   "type": [
     "VerifiableCredential",
-    "LegalRegistrationNumber"
+    "gx:LeiCode"
   ],
   "id": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
   "issuer": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
