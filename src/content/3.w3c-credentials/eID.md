@@ -2,25 +2,36 @@
 
 ```json
 {
-    "@context": ["https://www.w3.org/2018/credentials/v1"],
-    "type": ["VerifiableCredential", "VerifiableAttestation", "eID"],
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1"
+  ],
+  "id": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
+  "type": [
+    "VerifiableCredential",
+    "eID"
+  ],
+  "issuer": {
     "id": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
-    "credentialSubject": {
-        "id": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
-        "firstName": "John",
-        "lastName": "Doe",
-        "dateOfBirth": "1980-01-01",
-        "gender": "Male",
-        "nationality": "US",
-        "address": "123 Main St, Anytown, USA",
-        "documentId": "G7F2A04F7O"
+    "name": "Department of Home Affairs, Cape Town"
+  },
+  "issuanceDate": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
+  "expirationDate": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
+  "credentialSubject": {
+    "id": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
+    "fullName": "John Doe",
+    "firstName": "John",
+    "lastName": "Doe",
+    "nationality": "ZAF",
+    "documentId": "123456789",
+    "issuingCountry": "ZAF",
+    "dateOfBirth": "1990-04-15",
+    "sex": "M",
+    "placeOfBirth": {
+      "country": "South Africa",
+      "city": "Johannesburg"
     },
-    "issuer": {
-        "id": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
-        "name": "Government of Anytown"
-    },
-    "issuanceDate": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION",
-    "expirationDate": "THIS WILL BE REPLACED WITH DYNAMIC DATA FUNCTION"
+    "address": "123 Kloof Street, Cape Town, 8001, South Africa"
+  }
 }
 ```
 
@@ -28,15 +39,18 @@
 
 ```json
 {
-    "claims": {
-        "Document ID": "$.credentialSubject.documentId",
-        "Name": "$.credentialSubject.firstName",
-        "Last Name": "$.credentialSubject.lastName",
-        "Date of Birth": "$.credentialSubject.dateOfBirth",
-        "Gender": "$.credentialSubject.gender",
-        "Nationality": "$.credentialSubject.nationality",
-        "Address": "$.credentialSubject.address"
-    }
+  "claims": {
+    "Document ID": "$.credentialSubject.documentId",
+    "First Name": "$.credentialSubject.firstName",
+    "Last Name": "$.credentialSubject.lastName",
+    "Date of Birth": "$.credentialSubject.dateOfBirth",
+    "Sex": "$.credentialSubject.sex",
+    "Nationality": "$.credentialSubject.nationality",
+    "Issuing Country": "$.credentialSubject.issuingCountry",
+    "Place of Birth Country": "$.credentialSubject.placeOfBirth.country",
+    "Place of Birth City": "$.credentialSubject.placeOfBirth.city",
+    "Address": "$.credentialSubject.address"
+  }
 }
 ```
 
@@ -44,14 +58,14 @@
 
 ```json
 {
-    "id": "<uuid>",
-    "issuer": {
-        "id": "<issuerDid>"
-    },
-    "credentialSubject": {
-        "id": "<subjectDid>"
-    },
-    "issuanceDate": "<timestamp>",
-    "expirationDate": "<timestamp-in:365d>"
+  "id": "<uuid>",
+  "issuer": {
+    "id": "<issuerDid>"
+  },
+  "credentialSubject": {
+    "id": "<subjectDid>"
+  },
+  "issuanceDate": "<timestamp>",
+  "expirationDate": "<timestamp-in:365d>"
 }
 ```
