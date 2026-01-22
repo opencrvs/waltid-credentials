@@ -42,7 +42,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: waltid/vc-repository:latest, waltid/vc-repository:${{ env.release_version }}
+          tags: opencrvs/vc-repository:latest, opencrvs/vc-repository:${{ env.release_version }}
       # changelog
       - name: Changelog
         uses: ardalanamini/auto-changelog@v3
